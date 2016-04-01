@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
 
-public class CalculoFerias {
+public class TestCalculoFerias {
 	  private static WebDriver driver;
 	  private boolean acceptNextAlert = true;
 	  private StringBuffer verificationErrors = new StringBuffer();
