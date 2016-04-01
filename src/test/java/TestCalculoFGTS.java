@@ -46,6 +46,15 @@ public class TestCalculoFGTS {
     assertEquals("R$ 264,00", page.getValorCalculado());
     assertEquals("R$ 88,00", page.getRecolhimentoMensal());
   }
+  
+  @Test
+  public void testSalarioMedioUmMesTrabalhado() throws Exception {
+    page.setSalario("4.500,00");
+    page.setMesesTrabalhados("1");
+    page.calcular();
+    assertEquals("R$ 360,00", page.getValorCalculado());
+    assertEquals("R$ 360,00", page.getRecolhimentoMensal());
+  }
 
   @After
   public void tearDown() throws Exception {
