@@ -40,8 +40,4 @@ public WebDriver driver;
 	public String getRecolhimentoMensal(){
 		return(driver.findElement(By.id("descontoSalario")).getText());
 	}
-	
-	public String getTituloPagina(){
-		return(driver.findElement(By.xpath("//h1")).getText());
-	}
 }

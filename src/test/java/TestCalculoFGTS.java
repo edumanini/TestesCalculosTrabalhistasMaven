@@ -63,7 +63,6 @@ public class TestCalculoFGTS {
     page.calcular();
     assertEquals("R$ 1.902,40", page.getValorCalculado());
     assertEquals("R$ 46,40", page.getRecolhimentoMensal());
-    assertEquals("Cálculo de FGTS", page.getTituloPagina());
     
   }
 
