@@ -69,6 +69,16 @@ public class TestCalculoFerias {
 	    page.calcular();
 	    assertEquals("R$ 736,00", page.getValorCalculado());
 	  }
+	  
+	  @Test
+	  public void testNumeroAltoDependentes() throws Exception {
+	    page.setSalario("1.800,00");
+	    page.setNumeroDependentes("8");
+	    page.setDiasFerias("30");
+	    page.setOpcaoVenderFerias(false);
+	    page.calcular();
+	    assertEquals("R$ 2.136,00", page.getValorCalculado());
+	  }
 
 	  @After
 	  public void tearDown() throws Exception {
