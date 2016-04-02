@@ -55,6 +55,17 @@ public class TestCalculoFGTS {
     assertEquals("R$ 360,00", page.getValorCalculado());
     assertEquals("R$ 360,00", page.getRecolhimentoMensal());
   }
+  
+  @Test
+  public void testRecolhimentoOitoPorCento() throws Exception {
+    page.setSalario("580,00");
+    page.setMesesTrabalhados("41");
+    page.calcular();
+    assertEquals("R$ 1.902,40", page.getValorCalculado());
+    assertEquals("R$ 46,40", page.getRecolhimentoMensal());
+    assertEquals("Cálculo de FGTS", page.getTituloPagina());
+    
+  }
 
   @After
   public void tearDown() throws Exception {
